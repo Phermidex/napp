@@ -1,0 +1,30 @@
+{
+  "name": "notchapp",
+  "version": "1.0.0",
+  "description": "app for services of 3dcart stores",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "notchapp"
+  },
+  "keywords": [
+    "widgets",
+    "apps",
+    "3dcart"
+  ],
+  "author": "notchsoluctions",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "pg": "^7.18.2",
+    "sass": "^1.26.3"
+  }
+}
