@@ -10,7 +10,7 @@
         "start-server": "browser-sync start --server 'public/' --files 'public/' --port 9000 --no-ui"
     },
     "nodemonConfig": {
-        "delay": "2000"
+        "delay": "1000"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
