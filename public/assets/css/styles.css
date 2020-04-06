@@ -1,0 +1,116 @@
+body {
+  background-color: white;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.sidenav {
+  height: auto;
+  min-height: 100vh;
+}
+
+body nav {
+  box-shadow: -1px -3px 4px 4px #00000026;
+}
+
+body nav a {
+  color: black;
+}
+
+html .card {
+  box-shadow: 0px 3px 5px 0px #00000033;
+}
+.card-action {
+  text-align: center;
+}
+.card-action a {
+  margin: 0px !important;
+}
+
+body .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  padding: 12px;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(90deg, rgba(9,32,121,1) 16%, rgba(0,95,255,1) 71%);
+  box-shadow: 0px 3px 4px 1px #00000052;
+  font-family: Lato;
+  font-size: 0.8em;
+}
+
+ul#mobile-demo {
+  background: #0d54cc;
+}
+
+html .sidenav li>a {
+  color: white;
+}
+
+.sidenav p {
+  color: #cacaca57;
+  text-align: center;
+  font-size: 2em;
+}
+
+
+html .sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 997;
+  display: none;
+}
+
+.sidenav hr {
+  border: 8px solid #00000012;
+}
+
+.sidenav li.active {
+  background-color: rgba(0,0,0,0.05);
+  border-left: 6px solid white;
+}
+
+html .sidenav .material-icons {
+  font-size: 38px;
+}
+
+.card-content.black-text img:hover {
+  filter: contrast(0.8);
+}
+.card-content.black-text img {
+  width: 100%;
+  max-width: 250px;
+  margin: 0px auto;
+  align-content: center;
+  display: block;
+  padding: 15px;
+}
+
+.logger-in .sidebar-brand-text small{
+  font-size: 7px;
+}
+
+.logger-out .sidebar-brand-text small{
+  font-size: 10px;
+}
+
+.logo-brand {
+  display: block;
+  text-indent: -9999px;
+  width: 56px;
+  height: 50px;
+  background-image: url(../img/shopping-bag.svg);
+  background-size: 56px 50px;
+}
+

@@ -1,0 +1,27 @@
+
+{% extends 'frame.html'  %}
+
+{% block content %}
+<a href="/new" class="btn btn-light">Add new</a>
+<div class="row">
+
+    
+    {% for row in datos %}
+      <div class="col s12 m6">
+        <div class="card">
+            <div class="card-content black-text">
+                <span class="card-title">{{ row.title }}</span>
+                <img src="{{ row.img_url }}"/>
+                <p>{{ row.description }}.</p>
+            </div>
+            <div class="card-action">
+                <a target="_blank" href="{{ row.url }}">{{ btn_text }}</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+</div>
+
+{% endblock %}

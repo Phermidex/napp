@@ -1,0 +1,33 @@
+{% extends 'frame.html'  %}
+
+{% block content %}
+<div class="row">
+    <a class="btn" onclick="goBack()">Go back</a>
+    <div class="col s12 m12">
+        <div class="card">
+            <div class="card-content black-text">
+                <span class="card-title">Add new book</span>
+                <form action="/datos/create/" method="post">
+                    <label for="title">Title</label>
+                    <input id="title" type="text" name="title"/>
+                    <label for="">Description</label>
+                    <input type="text" name="description"/>
+                    <label for="">Image url</label>
+                    <input type="url" name="img_url"/>
+                    <label for="">Url link</label>
+                    <input type="url" name="url"/>
+                    <hr>
+                    <button type="submit" class="btn btn-dark">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+          window.history.back();
+        }
+    </script>
+
+</div>
+
+{% endblock %}

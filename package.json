@@ -1,30 +1,26 @@
 {
-  "name": "notchapp",
-  "version": "1.0.0",
-  "description": "app for services of 3dcart stores",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "notchapp"
-  },
-  "keywords": [
-    "widgets",
-    "apps",
-    "3dcart"
-  ],
-  "author": "notchsoluctions",
-  "license": "ISC",
-  "dependencies": {
-    "browser-sync": "^2.26.7",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0",
-    "express-session": "^1.17.0",
-    "pg": "^7.18.2",
-    "sass": "^1.26.3"
-  }
+    "name": "napp",
+    "version": "1.0.0",
+    "description": "App testing for skills",
+    "main": "app.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon app.js & npm run start-server",
+        "restart": "kill -9 $(ps aux | grep node | awk '{print $2}') && node app.js",
+        "start-server": "browser-sync start --server 'public/' --files 'public/' --port 9000 --no-ui"
+    },
+    "nodemonConfig": {
+        "delay": "2000"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "browser-sync": "^2.26.7",
+        "mongodb": "^3.3.2",
+        "mongoose": "^5.7.1",
+        "mongose": "0.0.2-security",
+        "morgan": "^1.9.1",
+        "mysql": "^2.17.1",
+        "request": "^2.88.0",
+        "window-location-origin": "^0.1.0"
+    }
 }

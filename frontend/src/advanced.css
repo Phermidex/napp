@@ -1,0 +1,67 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#root {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.term-params {
+    padding: 0 !important;
+}
+
+.page-advanced {
+    background-color: #000;
+}
+
+.tabTwo.active-tab button {
+    padding: 1em;
+    border: 1px solid #fcfcfc;
+    background-color: #000;
+    color: #fff;
+    display: inline;
+}
+
+.tabTwo.active-tab select {
+    padding: 1em;
+    border: 1px solid #fcfcfc;
+    background-color: #0b0b0b;
+    color: #fff;
+    display: inline;
+}
+
+.tabTwo.active-tab button:hover {
+    background-color: #fcfcfc;
+    color: #000;
+    border-color: #000;
+}
+
+.tabTwo.active-tab input[type="text"] {
+    padding: 0.99em;
+    background: #000;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.tabTwo.active-tab ul {
+    margin: 0px;
+    padding: 5px;
+    background-color: #000;
+    box-shadow: 0px 10px 5px rgb(18, 15, 15, 0.1);
+}
+
+.tabTwo.active-tab ul>li {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid blueviolet;
+}
+
+.tabTwo.active-tab .loadingSearch {
+    text-align: center;
+    margin: 0px auto;
+    width: 10%;
+}

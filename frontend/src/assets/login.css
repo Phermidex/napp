@@ -1,0 +1,62 @@
+
+
+input.form-control {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card.login {
+    width: 55%;
+    margin: 0px auto;
+    height: auto;
+    top: 75px;
+    bottom: auto;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+.ggicons {
+    width: 42px !important;
+    padding-right: 20px;
+}
+
+
+.login p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.login h2 {
+    color: #349ff4;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+    border-bottom: 2px solid #f3f1f1;
+    margin: 15px;
+    padding-top: 5px;
+    padding-bottom: 47px;
+}
+
+.small-size {
+    font-size: 20px;
+    color: #906c06;
+}
+
+@media screen and (max-width: 1000px){
+    .div-frame-adviced {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 568px){
+
+    .card.login {
+        width: 80%;
+    }
+}
