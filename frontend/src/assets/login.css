@@ -5,11 +5,19 @@ input.form-control {
     padding-right: 10px;
 }
 
-.card.login {
+.card.register {
     width: 55%;
     margin: 0px auto;
     height: auto;
-    top: 75px;
+    top: 20px;
+    bottom: auto;
+}
+
+.card.login {
+    width: 100%;
+    margin: 0px auto;
+    height: auto;
+    top: 0px;
     bottom: auto;
 }
 
@@ -46,6 +54,11 @@ input.form-control {
 .small-size {
     font-size: 20px;
     color: #906c06;
+}
+
+.div-frame-login.col form {
+    max-width: 450px;
+    margin: auto;
 }
 
 @media screen and (max-width: 1000px){

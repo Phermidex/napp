@@ -9,6 +9,7 @@ const indexRouter = require('./public/routes/index');
 // settings
 require('dotenv').config();
 app.use(express.static(__dirname + '/public/assets/'));
+//app.use(express.static('public'));
 //app.use(express.Router());
 app.use(body_parser.json());
 app.use(express.urlencoded({
@@ -55,6 +56,9 @@ app.get('*', indexRouter, (req, res) => {
 };
   res.status(404).render('404.html', configuration_config);
 });
+
+/*app.get('/users/:username/:password', indexRouter);
+app.get('/profile/:id', indexRouter);*/
 
 app.post('*', indexRouter, (req, res) => {
   const configuration_config = {

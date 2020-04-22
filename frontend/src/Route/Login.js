@@ -19,25 +19,25 @@ const responseGoogle = response => {
     )}`,
     email: response.profileObj.email,
     img_uri: response.profileObj.imageUrl,
-    creation_date: today
+    creation_date: today,
   };
 
-  const url = "http://localhost:3002/account/new/";
+  const url = "http://localhost:3002/auth/login/";
 
   console.log(data);
   fetch(url, {
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     method: "POST",
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   })
     .then(response => response.json())
     .then(json => {
       if (json[0].validated == true) {
         localStorage.setItem("session_user", json[0].username);
         localStorage.setItem("session_user_id", json[0].id_users);
-        localStorage.setItem("session_user_img", response.profileObj.imageUrl);
+        localStorage.setItem("session_user_img", json[0].img_uri);
         localStorage.setItem("sessionApp", true);
         console.log(json[0].id_users);
         window.location.href = "/";
@@ -55,37 +55,49 @@ const Login = props => {
       <div className="card login">
         <div className="card-body">
           <div className="row">
+            <div className="div-frame-adviced col">
+              <div />  <img src={ccimg} /> {" "}
+            </div>{" "}
+            {" "}
             <div className="div-frame-login col">
-              <div>
-                <h2>
-                  Notch App <br/>{" "}
-                  <small className="small-size">
-                    <b>Sign in</b> and manage your feactures
-                  </small>
-                </h2>
-              </div>
+              <h2>
+                Notch App <br />  {" "}
+              </h2>{" "}
+              {" "}
               <form onSubmit={props.onLogin}>
                 <div className="form-group">
-                  <label>Username</label>
+                  <label> Username </label> {" "}
                   <input
                     onChange={props.onUserchange}
                     className="form-control"
                   />
-                </div>
+                </div>{" "}
+                {" "}
                 <div className="form-group">
-                  <label>Password</label>
+                  <label> Password </label> {" "}
                   <input
                     type="password"
                     onChange={props.onPasswordChange}
                     className="form-control"
                   />
-                </div>
+                </div>{" "}
+                {" "}
                 <div className={props.message_style}>
-                  {props.message}
-                </div>
+                  {" "}  {props.message}  {" "}
+                </div>{" "}
+                {" "}
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">Sign in</button>
-                  <p>Or</p>
+                  <label>
+                    {" "}<input type="checkbox" /> Remenber me{" "}
+                  </label>{" "}
+                  <br />
+                  <a href="#"> recovery my password ? </a>{" "}
+                </div>{" "}
+                <div className="form-group">
+                  <button className="btn btn-primary btn-block">
+                    {" "} Sign in  {" "}
+                  </button>{" "}
+                   <p> Or </p> {" "}
                   <GoogleLogin
                     clientId="368908477176-71dsa4t0likfb6ku70g169iki23qr4hd.apps.googleusercontent.com"
                     buttonText="Login"
@@ -99,17 +111,23 @@ const Login = props => {
                         disabled={renderProps.disabled}
                       >
                         <img className="ggicons" src={ggicons} />Sign in with
-                        Google
+                        Google  {" "}
                       </button>}
                   />
-                </div>
-              </form>
-            </div>
-            <div className="div-frame-adviced col">
-              <img src={ccimg} />
-            </div>
-          </div>
-        </div>
+                </div>{" "}
+                {" "}
+              </form>{" "}
+              {" "}
+            </div>{" "}
+            {" "}
+          </div>{" "}
+          {" "}
+          <div>
+            <p> & copy;Notchsoluctions 2020 </p> {" "}
+          </div>{" "}
+          {" "}
+        </div>{" "}
+        {" "}
       </div>
     );
   }

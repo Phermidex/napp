@@ -15,8 +15,16 @@ import jokerlogo from "./joker.jpg";
 import Advanced from "./Advanced.js";
 import Main from "./Route/Main";
 import Pos from "./Route/Pos";
-import Registercash from "./Route/Registercash";
+import Appkeys from "./Route/AppKeys";
+import ConfigPage from "./Route/Config";
 import Login from "./Route/Login";
+import Profile from "./Route/Profile";
+//import {BASEURL, APIConectionOne} from "dotenv";
+
+
+require('dotenv').config();
+
+//const base_url = BASEURL;
 
 class App extends React.Component {
   constructor() {
@@ -41,6 +49,10 @@ class App extends React.Component {
     this.onPasswordChange = this.onPasswordChange.bind(this);
   }
 
+  componentDidMount() {
+    console.log(`hola esto esss: ${process.env.REACT_APP_BASE_URL}`);
+  }
+
   passencrypt(password) {
     let encode = new Buffer(password);
     return encode.toString("base64");
@@ -54,7 +66,7 @@ class App extends React.Component {
     event.preventDefault();
     if (this.state.username && this.state.password) {
       fetch(
-        `http://localhost:3002/users/${this.state.username}/${this.passencrypt(
+        `${process.env.REACT_APP_API_url_one}/users/${this.state.username}/${this.passencrypt(
           this.state.password
         )}`,
         {
@@ -159,6 +171,17 @@ class App extends React.Component {
     return (
       <Router>
           <Switch>
+          <Route path="/register">
+              <div className="row login">
+                <Login
+                  onLogin={this.onLogin}
+                  onUserchange={this.onUserchange}
+                  onPasswordChange={this.onPasswordChange}
+                  message={this.state.message}
+                  message_style={this.state.message_style}
+                />
+              </div>
+            </Route>
             <Route path="/login">
               <div className="row login">
                 <Login
@@ -170,18 +193,32 @@ class App extends React.Component {
                 />
               </div>
             </Route>
-            <Route path="/pos">
+            <Route path="/store/apps">
               <div className="row pos">
                 <Navbar AdvanceTab={this.AdvanceTab} />
                 <Side />
-                <Pos />
+                <Appkeys />
               </div>
             </Route>
-            <Route path="/registercash">
+            <Route path="/systems/appkeys">
               <div className="row cash">
                 <Navbar AdvanceTab={this.AdvanceTab} />
                 <Side />
-                <Registercash />
+                <Appkeys />
+              </div>
+            </Route>
+            <Route path="/systems/config">
+              <div className="row cash">
+                <Navbar AdvanceTab={this.AdvanceTab} />
+                <Side />
+                <ConfigPage />
+              </div>
+            </Route>
+            <Route path="/account/profile">
+              <div className="row main">
+                <Navbar AdvanceTab={this.AdvanceTab} />
+                <Side />
+                <Profile />
               </div>
             </Route>
             <Route path="/">
